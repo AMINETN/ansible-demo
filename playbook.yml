@@ -1,9 +1,10 @@
---- 
-- 
-  become: true
+---
+-
   hosts: web-servers
   remote_user: ansadmin
-  tasks: 
-    - 
-      roles: 
-        - nginx
+  become: true
+  tasks:
+  - name: creer le group
+    group:
+      name: devops123
+      state: present
